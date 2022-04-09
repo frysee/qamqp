@@ -3,20 +3,20 @@
 
 QAMQP
 =============
-A Qt4/Qt5/Qt6 implementation of AMQP 0.9.1, focusing primarily on RabbitMQ support.
+A Qt6 implementation of AMQP 0.9.1, focusing primarily on RabbitMQ support.
 
 
 Building with CMake
 ------------
 - ensure you have the following packages on the `PATH`
     - **CMake** >= 3.12 
-    - **Qt** >= 5.9
+    - **Qt** >= 6.0
     - **lcov**
 
 - checkout sources
 ```sh
 $ cd ~/src
-$ git clone git@github.com:ssproessig/qamqp.git
+$ git clone git@github.com:frysee/qamqp.git
 ```
 
 - we are going to build in a separate out-of-tree build directory
