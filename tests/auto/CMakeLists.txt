@@ -1,9 +1,9 @@
 set(LNK Qt6::Core Qt6::Network)
 
-add_qtest(NAME qamqpchannel SOURCES qamqpchannel/tst_qamqpchannel.cpp $<TARGET_OBJECTS:qamqp-lib-coverage> LIBS ${LNK})
-add_qtest(NAME qamqpclient SOURCES qamqpclient/certs.qrc qamqpclient/tst_qamqpclient.cpp $<TARGET_OBJECTS:qamqp-lib-coverage> LIBS ${LNK})
-add_qtest(NAME qamqpexchange SOURCES qamqpexchange/tst_qamqpexchange.cpp $<TARGET_OBJECTS:qamqp-lib-coverage> LIBS ${LNK})
-add_qtest(NAME qamqpqueue SOURCES qamqpqueue/tst_qamqpqueue.cpp $<TARGET_OBJECTS:qamqp-lib-coverage> LIBS ${LNK})
+add_qtest(NAME qamqpchannel SOURCES qamqpchannel/tst_qamqpchannel.cpp $<TARGET_OBJECTS:qamqp-coverage> LIBS ${LNK})
+add_qtest(NAME qamqpclient SOURCES qamqpclient/certs.qrc qamqpclient/tst_qamqpclient.cpp $<TARGET_OBJECTS:qamqp-coverage> LIBS ${LNK})
+add_qtest(NAME qamqpexchange SOURCES qamqpexchange/tst_qamqpexchange.cpp $<TARGET_OBJECTS:qamqp-coverage> LIBS ${LNK})
+add_qtest(NAME qamqpqueue SOURCES qamqpqueue/tst_qamqpqueue.cpp $<TARGET_OBJECTS:qamqp-coverage> LIBS ${LNK})
 
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
   set(COVERAGE_SH ${PROJECT_BINARY_DIR}/generate_coverage.sh)
